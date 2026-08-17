@@ -1,9 +1,10 @@
 /* =========================================
-   NAVBAR
+   MADDY'S NAVBAR
 ========================================= */
 
-.navbar {
+.maddy-navbar {
   position: fixed;
+
   top: 18px;
   left: 24px;
   right: 24px;
@@ -11,27 +12,25 @@
   z-index: 1000;
 
   width: auto;
-  max-width: 1450px;
-
-  margin: 0 auto;
+  max-width: 1440px;
 
   min-height: 76px;
 
+  margin: 0 auto;
   padding: 0 22px;
 
   display: flex;
   align-items: center;
 
-  background: rgba(33, 23, 18, 0.96);
+  background: rgba(38, 26, 20, 0.96);
 
   border: 1px solid rgba(244, 234, 219, 0.12);
 
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.16);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.18);
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
-  overflow: hidden;
 }
 
 
@@ -39,27 +38,28 @@
    LOGO
 ========================================= */
 
-.navbar-logo {
-  flex: 0 0 170px;
+.maddy-logo {
+  flex: 0 0 180px;
+
+  min-width: 0;
 
   display: flex;
   flex-direction: column;
-
   align-items: flex-start;
 
-  color: var(--cream);
+  color: #f4eadb;
 
   text-decoration: none;
 
   line-height: 1;
 }
 
-.navbar-logo-top {
+.maddy-logo-small {
   margin-left: 2px;
 
-  color: var(--caramel);
+  color: #c99a68;
 
-  font-family: var(--font-body);
+  font-family: Arial, sans-serif;
 
   font-size: 8px;
 
@@ -68,57 +68,57 @@
   letter-spacing: 0.3em;
 }
 
-.navbar-logo-name {
+.maddy-logo-name {
   margin-top: 4px;
 
-  font-family: var(--font-display);
+  font-family: Georgia, serif;
 
-  font-size: 32px;
+  font-size: 31px;
 
   font-weight: 500;
 
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 
   white-space: nowrap;
 }
 
-.navbar-logo-bottom {
-  margin-top: 3px;
+.maddy-logo-sub {
+  margin-top: 4px;
   margin-left: 2px;
 
-  color: rgba(244, 234, 219, 0.55);
+  color: rgba(244, 234, 219, 0.52);
 
-  font-family: var(--font-body);
+  font-family: Arial, sans-serif;
 
-  font-size: 7px;
+  font-size: 6px;
 
   font-weight: 600;
 
-  letter-spacing: 0.34em;
+  letter-spacing: 0.28em;
+
+  white-space: nowrap;
 }
 
 
 /* =========================================
-   LINKS
+   DESKTOP NAVIGATION
 ========================================= */
 
-.navbar-links {
-  flex: 1 1 auto;
+.maddy-desktop-nav {
+  flex: 1;
 
   min-width: 0;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
-  gap: clamp(20px, 2.8vw, 40px);
+  gap: clamp(22px, 3vw, 42px);
 
   padding: 0 20px;
 }
 
-.navbar-links a {
+.maddy-desktop-nav a {
   position: relative;
 
   flex-shrink: 0;
@@ -127,120 +127,118 @@
 
   color: rgba(244, 234, 219, 0.82);
 
-  font-family: var(--font-body);
+  font-family: Arial, sans-serif;
 
-  font-size: 12px;
+  font-size: 11px;
 
   font-weight: 600;
 
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
 
   line-height: 1;
+
+  text-decoration: none;
 
   text-transform: uppercase;
 
   white-space: nowrap;
 
-  text-decoration: none;
-
   transition: color 0.25s ease;
 }
 
-.navbar-links a::after {
+.maddy-desktop-nav a::after {
   content: "";
 
   position: absolute;
 
   left: 0;
-  bottom: 2px;
+  bottom: 1px;
 
   width: 0;
   height: 1px;
 
-  background: var(--caramel);
+  background: #c99a68;
 
-  transition: width 0.3s ease;
+  transition: width 0.25s ease;
 }
 
-.navbar-links a:hover {
-  color: var(--warm-white);
+.maddy-desktop-nav a:hover {
+  color: #ffffff;
 }
 
-.navbar-links a:hover::after {
+.maddy-desktop-nav a:hover::after {
   width: 100%;
 }
 
 
 /* =========================================
-   CTA
+   DESKTOP CTA
 ========================================= */
 
-.navbar-cta {
-  flex: 0 0 150px;
+.maddy-desktop-cta {
+  flex: 0 0 145px;
 
   height: 44px;
 
   padding: 0 15px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
-  background: var(--cream);
+  background: #f4eadb;
 
-  color: var(--espresso);
+  color: #261a14;
 
-  font-family: var(--font-body);
+  font-family: Arial, sans-serif;
 
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: 700;
 
-  letter-spacing: 0.06em;
-
-  line-height: 1;
-
-  text-transform: uppercase;
+  letter-spacing: 0.08em;
 
   text-decoration: none;
+
+  text-transform: uppercase;
 
   white-space: nowrap;
 
   transition:
-    background 0.3s ease,
-    color 0.3s ease;
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
-.navbar-cta:hover {
-  background: var(--caramel);
+.maddy-desktop-cta:hover {
+  background: #c99a68;
 
-  color: var(--warm-white);
+  color: #ffffff;
 }
 
-.navbar-cta-arrow {
+.maddy-cta-arrow {
   font-size: 16px;
 
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
-.navbar-cta:hover .navbar-cta-arrow {
+.maddy-desktop-cta:hover .maddy-cta-arrow {
   transform: translate(3px, -3px);
 }
 
 
 /* =========================================
-   MOBILE TOGGLE
+   MOBILE MENU BUTTON
 ========================================= */
 
-.navbar-toggle {
+.maddy-menu-button {
   display: none;
 
-  flex-shrink: 0;
+  flex: 0 0 44px;
 
   width: 44px;
   height: 44px;
+
+  margin-left: auto;
 
   padding: 0;
 
@@ -258,23 +256,28 @@
   cursor: pointer;
 }
 
-.navbar-toggle span {
-  width: 19px;
-  height: 1px;
+.maddy-menu-button span {
+  display: block;
 
-  background: var(--cream);
+  width: 20px;
+  height: 1.5px;
+
+  background: #f4eadb;
 
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
 }
 
-.navbar-toggle.active span:first-child {
-  transform: translateY(3.5px) rotate(45deg);
+
+/* Hamburger → X */
+
+.maddy-menu-button.is-open span:first-child {
+  transform: translateY(3.75px) rotate(45deg);
 }
 
-.navbar-toggle.active span:last-child {
-  transform: translateY(-3.5px) rotate(-45deg);
+.maddy-menu-button.is-open span:last-child {
+  transform: translateY(-3.75px) rotate(-45deg);
 }
 
 
@@ -282,99 +285,102 @@
    MOBILE MENU
 ========================================= */
 
-.mobile-menu {
+.maddy-mobile-menu {
   position: fixed;
 
   inset: 0;
 
-  z-index: 999;
+  z-index: 900;
 
   width: 100%;
   height: 100dvh;
 
-  padding: 125px 8vw 40px;
+  padding: 125px 8vw 35px;
 
   display: flex;
-
   flex-direction: column;
-
   justify-content: space-between;
 
-  background: var(--espresso);
-
-  color: var(--cream);
+  background: #261a14;
 
   overflow-y: auto;
 }
 
-.mobile-nav {
-  display: flex;
+.maddy-mobile-nav {
+  width: 100%;
 
+  display: flex;
   flex-direction: column;
 }
 
-.mobile-nav a {
-  display: flex;
+.maddy-mobile-nav a {
+  width: 100%;
 
+  padding: 18px 0;
+
+  display: flex;
   align-items: baseline;
 
   gap: 18px;
 
-  padding: 17px 0;
-
   border-bottom: 1px solid rgba(244, 234, 219, 0.12);
 
-  color: var(--cream);
+  color: #f4eadb;
 
-  font-family: var(--font-display);
+  font-family: Georgia, serif;
 
-  font-size: clamp(46px, 13vw, 72px);
+  font-size: clamp(42px, 12vw, 68px);
 
-  font-weight: 500;
+  font-weight: 400;
 
   line-height: 0.95;
 
   text-decoration: none;
 }
 
-.mobile-nav a span {
-  color: var(--caramel);
+.maddy-mobile-nav a span {
+  color: #c99a68;
 
-  font-family: var(--font-body);
+  font-family: Arial, sans-serif;
 
   font-size: 9px;
 
   font-weight: 600;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 }
 
-.mobile-menu-cta {
-  min-height: 55px;
+
+/* =========================================
+   MOBILE CTA
+========================================= */
+
+.maddy-mobile-cta {
+  width: 100%;
+
+  min-height: 56px;
 
   padding: 0 20px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
-  background: var(--cream);
+  background: #f4eadb;
 
-  color: var(--espresso);
+  color: #261a14;
 
-  font-family: var(--font-body);
+  font-family: Arial, sans-serif;
 
-  font-size: 12px;
+  font-size: 11px;
 
   font-weight: 700;
 
   letter-spacing: 0.08em;
 
-  text-transform: uppercase;
-
   text-decoration: none;
+
+  text-transform: uppercase;
 }
 
 
@@ -383,31 +389,31 @@
 ========================================= */
 
 @media (max-width: 1100px) {
-  .navbar {
+  .maddy-navbar {
     left: 18px;
     right: 18px;
 
     padding: 0 18px;
   }
 
-  .navbar-logo {
-    flex-basis: 145px;
+  .maddy-logo {
+    flex-basis: 150px;
   }
 
-  .navbar-links {
-    gap: 18px;
+  .maddy-desktop-nav {
+    gap: 20px;
 
     padding: 0 12px;
   }
 
-  .navbar-links a {
+  .maddy-desktop-nav a {
     font-size: 10px;
   }
 
-  .navbar-cta {
+  .maddy-desktop-cta {
     flex-basis: 125px;
 
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
@@ -417,70 +423,91 @@
 ========================================= */
 
 @media (max-width: 760px) {
-  .navbar {
+  .maddy-navbar {
     top: 12px;
-
     left: 12px;
     right: 12px;
 
     width: auto;
+    max-width: none;
 
     min-height: 68px;
 
-    padding: 0 15px;
-
     margin: 0;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: visible;
   }
 
-  .navbar-logo {
-    flex: 0 1 auto;
+  .maddy-logo {
+    flex: 1 1 auto;
+
+    min-width: 0;
   }
 
-  .navbar-logo-name {
-    font-size: 29px;
+  .maddy-logo-name {
+    font-size: 28px;
   }
 
-  .navbar-links,
-  .navbar-cta {
+  .maddy-logo-small {
+    font-size: 7px;
+  }
+
+  .maddy-logo-sub {
+    font-size: 5.5px;
+  }
+
+  .maddy-desktop-nav,
+  .maddy-desktop-cta {
     display: none;
   }
 
-  .navbar-toggle {
+  .maddy-menu-button {
     display: flex;
   }
 }
 
 
 /* =========================================
-   SMALL MOBILE
+   SMALL PHONES
 ========================================= */
 
 @media (max-width: 400px) {
-  .navbar {
+  .maddy-navbar {
     top: 10px;
-
     left: 10px;
     right: 10px;
 
     min-height: 64px;
 
-    padding: 0 13px;
+    padding: 0 12px;
   }
 
-  .navbar-logo-name {
-    font-size: 27px;
+  .maddy-logo-name {
+    font-size: 25px;
   }
 
-  .navbar-logo-top {
-    font-size: 7px;
-  }
-
-  .navbar-logo-bottom {
+  .maddy-logo-small {
     font-size: 6px;
   }
 
-  .navbar-toggle {
-    width: 40px;
-    height: 40px;
+  .maddy-logo-sub {
+    font-size: 5px;
+  }
+
+  .maddy-menu-button {
+    flex-basis: 42px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .maddy-menu-button span {
+    width: 19px;
   }
 }

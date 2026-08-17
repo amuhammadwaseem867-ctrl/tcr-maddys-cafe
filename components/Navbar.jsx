@@ -1,27 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
-
-const navLinks = [
-  {
-    label: "About",
-    href: "#about",
-  },
-  {
-    label: "Menu",
-    href: "#menu",
-  },
-  {
-    label: "Gallery",
-    href: "#gallery",
-  },
-  {
-    label: "Find Us",
-    href: "#location",
-  },
-];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,133 +14,122 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.header
-        className="navbar"
-        initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          duration: 0.7,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-      >
-        {/* LOGO */}
-
-        <a
-          href="/"
-          className="navbar-logo"
+      <header className="maddy-navbar">
+        {/* Logo */}
+        <Link
+          href="#top"
+          className="maddy-logo"
           onClick={closeMenu}
         >
-          <span className="navbar-logo-top">
-            TCR
+          <span className="maddy-logo-small">TCR</span>
+
+          <span className="maddy-logo-name">
+            Maddy's
           </span>
 
-          <span className="navbar-logo-name">
-            Maddy&apos;s
+          <span className="maddy-logo-sub">
+            CAFE & RESTAURANT
           </span>
+        </Link>
 
-          <span className="navbar-logo-bottom">
-            CAFE
-          </span>
-        </a>
-
-        {/* DESKTOP NAV */}
-
-        <nav className="navbar-links">
-          {navLinks.map((link) => (
-            <a
-              href={link.href}
-              key={link.label}
-            >
-              {link.label}
-            </a>
-          ))}
+        {/* Desktop Navigation */}
+        <nav className="maddy-desktop-nav">
+          <Link href="#about">About</Link>
+          <Link href="#menu">Menu</Link>
+          <Link href="#gallery">Gallery</Link>
+          <Link href="#location">Find Us</Link>
         </nav>
 
-        {/* DESKTOP CTA */}
-
-        <a
+        {/* Desktop CTA */}
+        <Link
           href="#menu"
-          className="navbar-cta"
+          className="maddy-desktop-cta"
         >
           <span>View Menu</span>
-          <span className="navbar-cta-arrow">
-            ↗
-          </span>
-        </a>
+          <span className="maddy-cta-arrow">↗</span>
+        </Link>
 
-        {/* MOBILE TOGGLE */}
-
+        {/* Mobile Menu Button */}
         <button
-          className={`navbar-toggle ${
-            menuOpen ? "active" : ""
+          type="button"
+          className={`maddy-menu-button ${
+            menuOpen ? "is-open" : ""
           }`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation"
+          aria-label={
+            menuOpen ? "Close navigation" : "Open navigation"
+          }
           aria-expanded={menuOpen}
         >
-          <span />
-          <span />
+          <span></span>
+          <span></span>
         </button>
-      </motion.header>
+      </header>
 
-      {/* MOBILE MENU */}
-
+      {/* Mobile Navigation */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="mobile-menu"
+            className="maddy-mobile-menu"
             initial={{
               opacity: 0,
-              clipPath: "inset(0 0 100% 0)",
+              y: -20,
             }}
             animate={{
               opacity: 1,
-              clipPath: "inset(0 0 0% 0)",
+              y: 0,
             }}
             exit={{
               opacity: 0,
-              clipPath: "inset(0 0 100% 0)",
+              y: -20,
             }}
             transition={{
-              duration: 0.5,
-              ease: [0.22, 1, 0.36, 1],
+              duration: 0.3,
+              ease: "easeOut",
             }}
           >
-            <nav className="mobile-nav">
-              {navLinks.map((link, index) => (
-                <motion.a
-                  href={link.href}
-                  key={link.label}
-                  onClick={closeMenu}
-                  initial={{
-                    opacity: 0,
-                    y: 25,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    delay: 0.15 + index * 0.07,
-                  }}
-                >
-                  <span>
-                    0{index + 1}
-                  </span>
+            <nav className="maddy-mobile-nav">
+              <Link
+                href="#about"
+                onClick={closeMenu}
+              >
+                <span>01</span>
+                About
+              </Link>
 
-                  {link.label}
-                </motion.a>
-              ))}
+              <Link
+                href="#menu"
+                onClick={closeMenu}
+              >
+                <span>02</span>
+                Menu
+              </Link>
+
+              <Link
+                href="#gallery"
+                onClick={closeMenu}
+              >
+                <span>03</span>
+                Gallery
+              </Link>
+
+              <Link
+                href="#location"
+                onClick={closeMenu}
+              >
+                <span>04</span>
+                Find Us
+              </Link>
             </nav>
 
-            <a
+            <Link
               href="#menu"
-              className="mobile-menu-cta"
+              className="maddy-mobile-cta"
               onClick={closeMenu}
             >
-              Explore Our Menu
+              <span>View Menu</span>
               <span>↗</span>
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+.footer {
+  padding: 110px 7vw 30px;
+
+  background: #17120f;
+
+  color: #f4ebdd;
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns: 1.5fr 0.8fr 1fr 0.8fr;
+
+  gap: 60px;
+
+  padding-bottom: 100px;
+
+  border-bottom: 1px solid rgba(244, 235, 221, 0.16);
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-kicker {
+  margin: 0 0 15px;
+
+  color: #c19a6c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.footer-brand h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(65px, 7vw, 95px);
+
+  font-weight: 500;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.04em;
+}
+
+.footer-brand h2 em {
+  color: #c19a6c;
+
+  font-weight: 400;
+}
+
+.footer-tagline {
+  margin: 30px 0 0;
+
+  color: rgba(244, 235, 221, 0.55);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   COLUMNS
+========================================= */
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.footer-title {
+  margin-bottom: 25px;
+
+  color: #c19a6c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+}
+
+.footer-column nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.footer-column a,
+.footer-column p {
+  margin: 0;
+
+  color: rgba(244, 235, 221, 0.68);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.footer-column a:hover {
+  color: #c19a6c;
+}
+
+.footer-column > a {
+  margin-top: 8px;
+}
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.footer-socials {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.footer-socials a {
+  color: #f4ebdd;
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+  padding-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+  color: rgba(244, 235, 221, 0.4);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.footer-bottom span:nth-child(2) {
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: rgba(244, 235, 221, 0.65);
+
+  text-align: right;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.footer-bottom a:hover {
+  color: #c19a6c;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 90px 6vw 25px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1.2fr 1fr 1fr;
+
+    gap: 50px;
+  }
+
+  .footer-brand {
+    grid-column: span 3;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 80px 7vw 25px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-bottom: 60px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-brand h2 {
+    font-size: 72px;
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+  }
+
+  .footer-title {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+  }
+
+  .footer-column a,
+  .footer-column p {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    font-size: 9px;
+  }
+
+  .footer-bottom span:nth-child(2) {
+    text-align: left;
+  }
+
+  .footer-bottom a {
+    text-align: left;
+  }
+}

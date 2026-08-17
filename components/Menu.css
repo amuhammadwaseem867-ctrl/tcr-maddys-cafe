@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+.menu {
+  padding: 150px 7vw 120px;
+
+  background: #f4ebdd;
+
+  color: #241914;
+
+  overflow: hidden;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.menu-eyebrow {
+  margin-bottom: 30px;
+
+  color: #9a704c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.menu-heading-row {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+.menu-heading-row h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(70px, 8vw, 120px);
+
+  font-weight: 500;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.04em;
+}
+
+.menu-heading-row h2 em {
+  color: #8d6446;
+
+  font-weight: 400;
+}
+
+.menu-heading-row p {
+  max-width: 330px;
+
+  margin: 0 0 5px;
+
+  color: #685548;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+/* ================================
+   MENU CONTENT
+================================ */
+
+.menu-content {
+  margin-top: 100px;
+}
+
+.menu-section {
+  margin-bottom: 85px;
+}
+
+.menu-category {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 12px;
+}
+
+.menu-category span {
+  flex-shrink: 0;
+
+  color: #9a704c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.menu-category div {
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(36, 25, 20, 0.18);
+}
+
+/* ================================
+   MENU ITEM
+================================ */
+
+.menu-item {
+  min-height: 95px;
+
+  display: grid;
+
+  grid-template-columns: 60px 1fr auto;
+
+  align-items: center;
+
+  gap: 25px;
+
+  border-bottom: 1px solid rgba(36, 25, 20, 0.13);
+
+  cursor: default;
+
+  transition: background 0.25s ease;
+}
+
+.menu-item:hover {
+  background: rgba(141, 100, 70, 0.045);
+}
+
+.menu-item-number {
+  color: #b89568;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.menu-item-info h3 {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 32px;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+}
+
+.menu-item-info p {
+  margin: 7px 0 0;
+
+  color: #806c5d;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.menu-note {
+  padding: 4px 8px;
+
+  border: 1px solid rgba(154, 112, 76, 0.4);
+
+  color: #9a704c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.menu-item-price {
+  color: #241914;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* ================================
+   BOTTOM NOTE
+================================ */
+
+.menu-bottom {
+  padding-top: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: #806c5d;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.menu-bottom-line {
+  width: 70px;
+
+  height: 1px;
+
+  background: #b89568;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 800px) {
+  .menu {
+    padding: 110px 6vw 90px;
+  }
+
+  .menu-heading-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .menu-content {
+    margin-top: 75px;
+  }
+
+  .menu-item {
+    grid-template-columns: 45px 1fr auto;
+
+    gap: 18px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .menu {
+    padding: 90px 7vw 80px;
+  }
+
+  .menu-eyebrow {
+    font-size: 11px;
+  }
+
+  .menu-heading-row h2 {
+    font-size: clamp(60px, 17vw, 80px);
+  }
+
+  .menu-heading-row p {
+    font-size: 15px;
+  }
+
+  .menu-heading-row p br {
+    display: none;
+  }
+
+  .menu-content {
+    margin-top: 65px;
+  }
+
+  .menu-section {
+    margin-bottom: 65px;
+  }
+
+  .menu-category {
+    gap: 15px;
+  }
+
+  .menu-category span {
+    font-size: 11px;
+  }
+
+  .menu-item {
+    min-height: 90px;
+
+    grid-template-columns: 25px 1fr auto;
+
+    gap: 8px;
+  }
+
+  .menu-item-number {
+    font-size: 10px;
+  }
+
+  .menu-item-info h3 {
+    font-size: 26px;
+
+    line-height: 1.05;
+  }
+
+  .menu-item-info p {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .menu-item-price {
+    font-size: 13px;
+  }
+
+  .menu-note {
+    font-size: 8px;
+
+    padding: 3px 5px;
+  }
+
+  .menu-bottom {
+    flex-wrap: wrap;
+
+    font-size: 9px;
+  }
+
+  .menu-bottom-line {
+    width: 30px;
+  }
+}

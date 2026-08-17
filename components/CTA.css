@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+.cta {
+  position: relative;
+
+  min-height: 760px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 120px 7vw;
+
+  overflow: hidden;
+
+  color: #f4ebdd;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.cta-image {
+  position: absolute;
+
+  inset: 0;
+
+  background-image: url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.cta-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(25, 16, 12, 0.82),
+      rgba(25, 16, 12, 0.52)
+    );
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.cta-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1100px;
+
+  text-align: center;
+}
+
+.cta-eyebrow {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #d1ad7d;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+}
+
+.cta-content h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(80px, 10vw, 145px);
+
+  font-weight: 500;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.045em;
+}
+
+.cta-content h2 em {
+  color: #d1ad7d;
+
+  font-weight: 400;
+}
+
+.cta-content p {
+  margin: 35px auto 0;
+
+  color: rgba(244, 235, 221, 0.8);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.cta-actions {
+  margin-top: 40px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.cta-primary,
+.cta-secondary {
+  min-height: 54px;
+
+  padding: 0 26px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.cta-primary {
+  gap: 22px;
+
+  background: #f4ebdd;
+
+  color: #241914;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.cta-primary span:last-child {
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.cta-primary:hover {
+  background: #d1ad7d;
+}
+
+.cta-primary:hover span:last-child {
+  transform: translate(4px, -4px);
+}
+
+.cta-secondary {
+  border: 1px solid rgba(244, 235, 221, 0.5);
+
+  color: #f4ebdd;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.cta-secondary:hover {
+  background: rgba(244, 235, 221, 0.1);
+
+  border-color: #f4ebdd;
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.cta-bottom {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 7vw;
+  right: 7vw;
+  bottom: 28px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: rgba(244, 235, 221, 0.55);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.14em;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .cta {
+    min-height: 680px;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(70px, 12vw, 105px);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .cta {
+    min-height: 650px;
+
+    padding: 90px 7vw;
+  }
+
+  .cta-eyebrow {
+    font-size: 11px;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(62px, 17vw, 82px);
+
+    line-height: 0.84;
+  }
+
+  .cta-content p {
+    font-size: 15px;
+  }
+
+  .cta-content p br {
+    display: none;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+  }
+
+  .cta-bottom {
+    left: 7vw;
+    right: 7vw;
+
+    bottom: 20px;
+
+    font-size: 8px;
+  }
+
+  .cta-bottom span:last-child {
+    display: none;
+  }
+}

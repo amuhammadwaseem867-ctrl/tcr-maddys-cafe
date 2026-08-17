@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+.features {
+  position: relative;
+
+  padding: 150px 7vw;
+
+  background: #241914;
+
+  color: #f4ebdd;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.features-header {
+  max-width: 850px;
+
+  margin-bottom: 90px;
+}
+
+.features-eyebrow {
+  margin-bottom: 28px;
+
+  color: #c19a6c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.features-header h2 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(70px, 8vw, 120px);
+
+  font-weight: 500;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.04em;
+}
+
+.features-header h2 em {
+  color: #cba77c;
+
+  font-weight: 400;
+}
+
+.features-header > p {
+  margin: 35px 0 0;
+
+  color: rgba(244, 235, 221, 0.68);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.features-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(244, 235, 221, 0.18);
+
+  border-bottom: 1px solid rgba(244, 235, 221, 0.18);
+}
+
+.feature-card {
+  position: relative;
+
+  min-height: 430px;
+
+  padding: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border-right: 1px solid rgba(244, 235, 221, 0.18);
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.feature-card:first-child {
+  border-left: 1px solid rgba(244, 235, 221, 0.18);
+}
+
+.feature-card:hover {
+  background: rgba(244, 235, 221, 0.045);
+}
+
+/* =========================================
+   TOP
+========================================= */
+
+.feature-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.feature-number {
+  color: #c19a6c;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+.feature-symbol {
+  color: rgba(244, 235, 221, 0.45);
+
+  font-size: 25px;
+
+  font-weight: 300;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+.feature-card:hover .feature-symbol {
+  color: #c19a6c;
+
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.feature-icon {
+  margin-top: 75px;
+
+  color: #d4b38b;
+
+  font-family: serif;
+
+  font-size: 43px;
+
+  line-height: 1;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.feature-card h3 {
+  margin: 30px 0 15px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.feature-card p {
+  max-width: 340px;
+
+  margin: 0;
+
+  color: rgba(244, 235, 221, 0.65);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.feature-line {
+  width: 0;
+
+  height: 1px;
+
+  margin-top: auto;
+
+  background: #b89568;
+
+  transition: width 0.5s ease;
+}
+
+.feature-card:hover .feature-line {
+  width: 100%;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .features {
+    padding: 110px 6vw;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 350px;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(244, 235, 221, 0.18);
+  }
+
+  .feature-card:last-child {
+    border-bottom: none;
+  }
+
+  .feature-card:first-child {
+    border-left: none;
+  }
+
+  .feature-icon {
+    margin-top: 45px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .features {
+    padding: 90px 7vw;
+  }
+
+  .features-eyebrow {
+    font-size: 11px;
+  }
+
+  .features-header {
+    margin-bottom: 60px;
+  }
+
+  .features-header h2 {
+    font-size: clamp(58px, 16vw, 78px);
+  }
+
+  .features-header > p {
+    margin-top: 28px;
+
+    font-size: 15px;
+  }
+
+  .features-header > p br {
+    display: none;
+  }
+
+  .feature-card {
+    min-height: 330px;
+
+    padding: 28px 5px;
+  }
+
+  .feature-icon {
+    margin-top: 45px;
+
+    font-size: 38px;
+  }
+
+  .feature-card h3 {
+    font-size: 38px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+}

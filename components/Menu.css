@@ -10,9 +10,7 @@
   overflow: hidden;
 }
 
-/* ================================
-   HEADER
-================================ */
+/* Header */
 
 .menu-eyebrow {
   margin-bottom: 30px;
@@ -74,9 +72,7 @@
   line-height: 1.75;
 }
 
-/* ================================
-   MENU CONTENT
-================================ */
+/* Menu content */
 
 .menu-content {
   margin-top: 100px;
@@ -120,9 +116,7 @@
   background: rgba(36, 25, 20, 0.18);
 }
 
-/* ================================
-   MENU ITEM
-================================ */
+/* Menu item */
 
 .menu-item {
   min-height: 95px;
@@ -218,9 +212,7 @@
   white-space: nowrap;
 }
 
-/* ================================
-   BOTTOM NOTE
-================================ */
+/* Bottom note */
 
 .menu-bottom {
   padding-top: 35px;
@@ -252,9 +244,7 @@
   background: #b89568;
 }
 
-/* ================================
-   TABLET
-================================ */
+/* Tablet */
 
 @media (max-width: 800px) {
   .menu {
@@ -280,9 +270,7 @@
   }
 }
 
-/* ================================
-   MOBILE
-================================ */
+/* Mobile */
 
 @media (max-width: 600px) {
   .menu {
